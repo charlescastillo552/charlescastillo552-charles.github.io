@@ -3,44 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barnes & Noble: The Reader's Retreat</title>
+    <title>HVAC Load Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+<body>
+    <div class="container">
+        <h1>HVAC Load Calculator</h1>
+        <form id="hvac-form">
+            <label for="length">Room Length (feet):</label>
+            <input type="number" id="length" name="length" required>
 
-    <!-- Header Section -->
-    <header style="background-color: #f8f8f8; padding: 20px; text-align: center; border-bottom: 2px solid #ccc;">
-        <h1 style="color: #333;">Barnes & Noble: The Reader's Retreat</h1>
-    </header>
+            <label for="width">Room Width (feet):</label>
+            <input type="number" id="width" name="width" required>
 
-    <!-- Navigation Bar -->
-    <nav style="background-color: #333; text-align: center; padding: 10px;">
-        <a href="#" style="color: white; text-decoration: none; margin: 0 20px;">Home</a>
-        <a href="#" style="color: white; text-decoration: none; margin: 0 20px;">About</a>
-        <a href="#" style="color: white; text-decoration: none; margin: 0 20px;">Books</a>
-        <a href="#" style="color: white; text-decoration: none; margin: 0 20px;">Contact</a>
-    </nav>
+            <label for="height">Room Height (feet):</label>
+            <input type="number" id="height" name="height" required>
 
-    <!-- Main Content Section -->
-    <main style="padding: 40px; text-align: center; background-color: #fff;">
-        <h2 style="color: #333; font-size: 24px; margin-bottom: 20px;">Welcome to The Reader's Retreat</h2>
-        <p style="font-size: 16px; line-height: 1.5; color: #555;">
-            Discover the latest collection of books, from timeless classics to new releases. At Barnes & Noble, we believe in the power of literature to inspire, inform, and entertain. Join us on a journey of discovery and adventure through the world of books.
-        </p>
-    <!-- Book Cover Image -->
-    <img src="book-cover.png" alt="Book Cover of The Reader's Choice" style="width: 100%; max-width: 300px; margin: 20px auto; display: block;">
+            <label for="windows">Number of Windows:</label>
+            <input type="number" id="windows" name="windows" required>
 
-        <!-- Call to Action Button -->
-        <a href="#" style="background-color: #0073e6; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 20px;">
-            Shop Now
-        </a>
-    </main>
+            <label for="doors">Number of Doors:</label>
+            <input type="number" id="doors" name="doors" required>
 
-    <!-- Footer Section -->
-    <footer style="background-color: #f8f8f8; text-align: center; padding: 20px; border-top: 2px solid #ccc;">
-        <p style="font-size: 12px; color: #777;">&copy; 2024 Barnes & Noble. All rights reserved.</p>
-    </footer>
+            <label for="insulation">Insulation Quality:</label>
+            <select id="insulation" name="insulation" required>
+                <option value="Good">Good</option>
+                <option value="Average">Average</option>
+                <option value="Poor">Poor</option>
+            </select>
 
+            <label for="people">Number of People:</label>
+            <input type="number" id="people" name="people" required>
+
+            <input type="submit" value="Calculate HVAC Load">
+        </form>
+
+        <div class="result" id="result"></div>
+        <div class="error" id="error"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-
